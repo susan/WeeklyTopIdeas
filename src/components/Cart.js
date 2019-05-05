@@ -16,11 +16,11 @@ class Cart extends Component {
     //console.log(this.props.user.user)
     const cartItems = this.props.carts.map((item, index)=> {
       return <List.Item  key={index}>
-            Title: {item.title} price: ${item.price} <Icon color='yellow'
+            Title: {item.title} Recent price: ${item.recent_price} <Icon color='yellow'
             name='trash alternate outline'
             onClick={() =>{
               let selectLineItem = this.props.lineItems.find(selection => {
-               return selection.book_id === item.id
+               return selection.report_id === item.id
               })
                this.props.deleteCartItem(selectLineItem)}
              }
@@ -33,8 +33,8 @@ class Cart extends Component {
 
 		return (
      <div>
-     <a className="ui purple label" >Cart</a>
-       <Header size="medium"> Cart Items</Header>
+     <a className="ui blue label" >Portfolio</a>
+       <Header size="medium"> Research Ideas</Header>
          <List size = {'large'}>
           {cartItems ? cartItems : null}
          </List>

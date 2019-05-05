@@ -8,9 +8,7 @@ import { Grid } from 'semantic-ui-react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
-
-
-import BookContainer from './containers/BookContainer'
+import ReportContainer from './containers/ReportContainer'
 
 
 class App extends Component {
@@ -20,7 +18,7 @@ class App extends Component {
       <Route path = '/' component={NavBar} />
       <Route path = '/register' component={RegistrationForm} />
       <Route path = '/login' component={LoginForm} />
-      <Route path = '/books'component={BookContainer} />
+      <Route path = '/reports'component={ReportContainer} />
       </div>
     );
   }

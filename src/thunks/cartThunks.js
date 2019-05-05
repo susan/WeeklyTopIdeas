@@ -11,15 +11,15 @@ export const deleteCartItem = (lineItem) => {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       },
       body: JSON.stringify({
-      	line_item: {
-      		lineItem
-      	}
+        lineItem
+
       })
     })
    .then(resp=> resp.json())
   .then(data => {
-    dispatch(removeLineItem(data.id))
-    dispatch(removeCartItem(data.book))
+    console.log(data)
+    dispatch(removeLineItem(data.cart))
+    dispatch(removeCartItem(data.report))
    })
   }
 }

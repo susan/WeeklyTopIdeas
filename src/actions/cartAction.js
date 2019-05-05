@@ -1,14 +1,14 @@
-export const addCartItem = (book) => {
+export const addCartItem = (report) => {
 	return {
 		type: "ADD_CART_ITEM",
-    payload: book
+    payload: report
 	}
 }
 
-export const removeCartItem = (book) => {
+export const removeCartItem = (report) => {
   return {
     type: "REMOVE_CART_ITEM",
-    payload: book
+    payload: report
   }
 }
 
@@ -50,10 +50,10 @@ export const getCartLineItems = (itemArray) => {
    }
 }
 
-export const removeLineItem = (id) => {
+export const removeLineItem = (lineItem) => {
   return {
     type: "REMOVE_LINE_ITEM",
-    payload: id
+    payload: lineItem
   }
 }
 

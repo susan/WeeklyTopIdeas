@@ -20,7 +20,7 @@ class RegistrationForm extends React.Component {
   	const user = this.state
   	//console.log(user)
   	this.props.createUser(user)
-    this.props.history.push('/books')
+    this.props.history.push('/reports')
 
   }
 

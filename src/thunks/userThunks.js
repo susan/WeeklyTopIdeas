@@ -44,7 +44,7 @@ export const loginUser = (user) => {
     })
     .then(resp => resp.json())
     .then(data => {
-      console.log(data.line_items)
+      console.log(data)
       dispatch(getUser(data))
       dispatch(getCartItems(data.cart_items))
       dispatch(getCartLineItems(data.line_items))
