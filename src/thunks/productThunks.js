@@ -1,24 +1,24 @@
-import { loadReports } from "../actions/reportAction"
+import { loadProducts } from "../actions/productAction"
 import { addCartItem, addLineItem } from "../actions/cartAction"
 
 
-export const getReports = () => {
-  console.log("in the reports")
+export const getProducts = () => {
+  console.log("in the products")
   return function thunk (dispatch) {
-    return fetch("http://localhost:3000/api/v1/reports")
+    return fetch("http://localhost:3000/api/v1/products")
   .then(resp => resp.json())
 	.then(data => {
      console.log(data)
-		dispatch(loadReports(data))
+		dispatch(loadProducts(data))
 	})
   }
 }
 
 
-export const createReport = (report) => {
-	console.log("thunkreport", report)
+export const createProduct = (product) => {
+	console.log("thunkreport", product)
   return function thunk (dispatch) {
-    return fetch(`http://localhost:3000/api/v1/reports`, {
+    return fetch(`http://localhost:3000/api/v1/products`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -26,13 +26,13 @@ export const createReport = (report) => {
         'Authorization': `Bearer ${localStorage.getItem("token")}`
       },
       body: JSON.stringify ({
-         report
+        product
       })
     })
     .then(resp => resp.json())
     .then(data => {
     	console.log(data)
-    	dispatch(addCartItem(data.report))
+    	dispatch(addCartItem(data.product))
       dispatch(addLineItem(data.line_item))
     })
   }

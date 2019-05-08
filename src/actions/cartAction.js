@@ -1,14 +1,14 @@
-export const addCartItem = (report) => {
+export const addCartItem = (product) => {
 	return {
 		type: "ADD_CART_ITEM",
-    payload: report
+    payload: product
 	}
 }
 
-export const removeCartItem = (report) => {
+export const removeCartItem = (product) => {
   return {
     type: "REMOVE_CART_ITEM",
-    payload: report
+    payload: product
   }
 }
 

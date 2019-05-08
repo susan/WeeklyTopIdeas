@@ -17,10 +17,10 @@ class NavBar extends Component {
    render() {
      return (
         <div className = "nav">
-          <NavLink className = "nav_item" to="/reports"> Reports  </NavLink>
+          <NavLink className = "nav_item" to="/products"> Products  </NavLink>
           <NavLink className = "nav_item" to="/register"> Sign Up </NavLink>
           <NavLink className = "nav_item" to="/login"> Login </NavLink>
-          <NavLink className = "nav_item" onClick={() => this.logout()} to="/reports"> Logout </NavLink>
+          <NavLink className = "nav_item" onClick={() => this.logout()} to="/products"> Logout </NavLink>
        </div>
       )
    }

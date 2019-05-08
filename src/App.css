@@ -17,14 +17,14 @@
 
 
 .image {
-  width:100px;
+  width:150px;
   height:200px;
   background-size: cover;
 }
 
 .image_large {
-  width:225px;
-  height:350px;
+  width:200px;
+  height:300px;
   background-size:
 }
 .nav {

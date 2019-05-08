@@ -19,7 +19,7 @@ export const deleteCartItem = (lineItem) => {
   .then(data => {
     console.log(data)
     dispatch(removeLineItem(data.cart))
-    dispatch(removeCartItem(data.report))
+    dispatch(removeCartItem(data.product))
    })
   }
 }

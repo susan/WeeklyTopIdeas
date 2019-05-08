@@ -21,7 +21,7 @@ class LoginForm extends React.Component {
     const user= this.state
     //console.log(user)
     this.props.loginUser(user)
-    this.props.history.push('/reports')
+    this.props.history.push('/products')
    }
 
 

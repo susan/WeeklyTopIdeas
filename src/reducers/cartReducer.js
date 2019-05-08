@@ -14,9 +14,9 @@ export default function cartReducer(state = initialCartState, action){
        return {...state, carts: newArray}
 
      case "REMOVE_CART_ITEM": {
-       let report = action.payload
-         return {...state, carts: state.carts.filter(reportObj =>
-            reportObj.id !== report.id
+       let product = action.payload
+         return {...state, carts: state.carts.filter(productObj =>
+            productObj.id !== product.id
          )}
       }
 
