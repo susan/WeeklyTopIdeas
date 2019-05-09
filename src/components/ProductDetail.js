@@ -27,13 +27,13 @@ class ProductDetail extends Component {
              </Grid.Column>
              <Grid.Column width={6}>
                <Header size="large"> Name: {this.props.selectedProduct.name}</Header>
-                <p> <a className="ui teal horizontal label">Description: </a>: {this.props.selectedProduct.description}</p>
+                <p> <a className="ui blue horizontal label">Description: </a>: {this.props.selectedProduct.description}</p>
                 <p> Size: {this.props.selectedProduct.size}</p>
                 <p> Item Code: ${this.props.selectedProduct.item_code} </p>
                 <p> Price: ${this.props.selectedProduct.price} </p>
                 { localStorage.getItem("token")
                   ?
-                <Icon color="teal" onClick={this.handleClick} name= "shopping cart" />
+                <Icon color="red" onClick={this.handleClick} name= "shopping cart" />
                 :
                 <Link to="/login"> Login to Add to Cart </Link>
                 }

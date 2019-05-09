@@ -13,7 +13,7 @@ class LogoutUser extends Component {
     localStorage.removeItem("token");
     this.props.logoutUser(this.props.user)
     this.props.clearCart(this.props.carts)
-    this.props.history.push('/reports');
+    this.props.history.push('/products');
 }
 
   render() {

@@ -16,7 +16,7 @@ class Cart extends Component {
     //console.log(this.props.user.user)
     const cartItems = this.props.carts.map((item, index)=> {
       return <List.Item  key={index}>
-            Name: {item.name} price: ${item.price} <Icon color='yellow'
+            Name: {item.name} price: ${item.price} <Icon color='red'
             name='trash alternate outline'
             onClick={() =>{
               let selectLineItem = this.props.lineItems.find(selection => {
